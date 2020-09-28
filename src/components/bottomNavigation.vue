@@ -5,7 +5,7 @@
           <!-- 首页 -->
         <div class="bottomNavigation_li_public_content" @click="clickChang('/')">
           <img v-bind:src="imagesUrl.homeIcon" alt="" />
-          <div :class=" imagesUrl.homeIcon.indexOf('shouye1') === -1 ? 'no_select' : 'select' ">
+          <div :class=" imagesUrl.editIcon.indexOf('bianxie1') === -1 ? 'no_select' : 'select' ">
             首页
           </div>
         </div>
@@ -40,12 +40,12 @@ export default {
       }
     }
   },
-  /* activated () {
+  created () {
     if (typeof this.$route.path === 'string') {
       const val1 = this.$route.path
       switch (val1) {
         case '/':
-          this.imagesUrl.homeIcon = require('../assets/shouye1.png') // 首页
+          this.imagesUrl.homeIcon = require('../assets/shouye_select.png') // 首页
           this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
           this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
           break
@@ -63,14 +63,14 @@ export default {
     } else {
       console.log('不合法参数')
     }
-  }, */
+  },
   methods: {
     // 点击切换函数
     clickChang (val) {
       if (typeof val === 'string') {
         switch (val) {
           case '/':
-            this.imagesUrl.homeIcon = require('../assets/shouye1.png') // 首页
+            this.imagesUrl.homeIcon = require('../assets/shouye_select.png') // 首页
             this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
             this.$router.push({ path: '/' })
@@ -86,24 +86,6 @@ export default {
             this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode1.png') // 我的
             this.$router.push({ path: '/my' })
-            break
-        }
-      } else {
-        console.log('不合法的传值')
-      }
-    },
-    // 点击导航栏事件
-    publicClick (val) {
-      if (typeof val === 'string') {
-        switch (val) {
-          case '/':
-            this.clickChang(val)
-            break
-          case '/edit':
-            this.clickChang(val)
-            break
-          case '/my':
-            this.clickChang(val)
             break
         }
       } else {
@@ -149,7 +131,7 @@ export default {
 }
 
 .no_select {
-  font-size: 14px;
+  font-size: 16px;
   color: #222;
 }
 
