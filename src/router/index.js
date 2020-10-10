@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import my from '../views/my.vue'
 import edit from '../views/edit.vue'
+import login from '../views/login.vue'
 
 Vue.use(Router)
 
@@ -15,6 +16,7 @@ export default new Router({
       component: Home
     },
     { path: '/edit', component: edit },
-    { path: '/my', component: my }
+    { name: 'my', path: '/my', component: my },
+    { path: '/login', component: login }
   ]
 })

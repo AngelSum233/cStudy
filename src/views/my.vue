@@ -5,9 +5,7 @@
       <div class="contentTop">
         <img src="../assets/headpic.png" alt="头像" />
         <div style="display: flex; flex-direction: column">
-          <span style="font-size: 28px; color: black" @click="loading">{{
-            loadingMes
-          }}</span>
+          <span style="font-size: 28px; color: black" @click="loading">{{loadingMes}}</span>
           <span style="font-size: 16px; color: #c3c3c3; margin-top: 11px"
             >每天努力一点点~</span
           >
@@ -21,14 +19,6 @@
         </div>
       </div>
     </div>
-    <!-- 弹窗loading -->
-    <el-dialog title="登录" :visible.sync="dialogLoadingVisible" width="80%">
-      <span>这是一段信息</span>
-      <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogLoadingVisible = false" size="mini">取 消</el-button>
-        <el-button type="primary" @click="dialogLoadingVisible = false" size="mini" >确 定</el-button>
-      </span>
-    </el-dialog>
     <bottomNavigation></bottomNavigation>
   </div>
 </template>
@@ -43,8 +33,7 @@ export default {
         { url: require('../assets/shoucang.png'), title: '我的收藏' },
         { url: require('../assets/xiaoxi.png'), title: '我的消息' }
       ],
-      loadingMes: '立即登录',
-      dialogLoadingVisible: false
+      loadingMes: '立即登录'
     }
   },
   components: {
@@ -52,8 +41,9 @@ export default {
   },
   methods: {
     loading () {
-      this.dialogLoadingVisible = true
-      this.loadingMes = '我爱学习'
+      this.$router.push({ path: '/login' })
+      /* this.loadingMes = window.sessionStorage.getItem('name') */
+      console.log(window.sessionStorage.getItem('name'))
     }
   }
 }
@@ -67,6 +57,7 @@ export default {
   display: flex;
   margin-top: 20px;
   margin-right: 10px;
+  margin-top: 10px;
 }
 .contentTop img {
   width: 80px;
