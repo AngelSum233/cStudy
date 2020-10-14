@@ -1,19 +1,20 @@
 <template>
   <div>
     <div>
-      <div>
-        <i class="el-icon-arrow-left"></i>
-        <span class="title">在线编译( c 语言)</span>
+      <div class="box1">
+        <div>
+          <i class="el-icon-arrow-left" style="font-size: 20px; margin-top: 15px; margin-left: 5px"></i>
+          <span class="title">在线编译</span>
+        </div>
       </div>
-      <div class="tableLine1"></div>
       <div class="compileCode">
         <span
           style="color: white; margin-left: 5px; font-size: 20px; border: 1px"
-          >main</span
-        >
+          >main.c</span>
+        <i class="el-icon-plus" style="font-size: 10px;margin-left: 15px; color: white"></i>
         <div class="tableLine2"></div>
       </div>
-      <i class="el-icon-refresh-right" style="color: grey; margin-left: 10px"
+      <i class="el-icon-refresh-right" style="color: grey; margin-left: 20px"
         >清空</i
       >
       <el-button
@@ -52,34 +53,40 @@ export default {
 </script>
 
 <style>
+  *{
+    margin: 0px;
+    padding: 0px;
+  }
+  .box1{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)
+  }
 .title {
-  font-family: 华文行楷;
-  font-size: 25px;
-}
-.tableLine1 {
-  margin-bottom: 10px;
-  margin-top: 1px;
-  width: 100%;
-  height: 1px;
-  background-color: #d4d4d4;
-  color: rgba(101, 101, 101, 1);
+  font-family: 微软雅黑;
+  font-size: 20px;
+  margin-left: 25px;
 }
 .compileCode {
-  width: 100%;
+  width: 90%;
+  margin: auto;
   height: 400px;
   background-color: black;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 .tableLine2 {
   margin-bottom: 10px;
   margin-top: 1px;
-  width: 60px;
+  width: 70px;
   height: 1px;
   background-color: #d4d4d4;
   color: rgba(101, 101, 101, 1);
 }
 .compileResult {
-  width: 100%;
+  margin: auto;
+  width: 90%;
   height: 400px;
   background-color: black;
   margin-top: 10px;
