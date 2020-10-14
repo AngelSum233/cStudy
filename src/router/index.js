@@ -5,6 +5,7 @@ import my from '../views/my.vue'
 import edit from '../views/Edit.vue'
 import login from '../views/login.vue'
 import Achieve from '../views/Achieve'
+import courseView from '../views/courseView'
 
 Vue.use(Router)
 /* push  */
@@ -29,6 +30,7 @@ export default new Router({
     { path: '/edit', component: edit },
     { path: '/my', component: my },
     { path: '/login', component: login },
-    { path: '/achieve', component: Achieve }
+    { path: '/achieve', component: Achieve },
+    { path: '/courseView', component: courseView }
   ]
 })
