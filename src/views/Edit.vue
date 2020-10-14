@@ -4,7 +4,7 @@
       <div class="box1">
         <div>
           <i class="el-icon-arrow-left" style="font-size: 20px; margin-top: 15px; margin-left: 5px"></i>
-          <span class="title">在线编译</span>
+          <span class="title">在线编译1</span>
         </div>
       </div>
       <div class="compileCode">
