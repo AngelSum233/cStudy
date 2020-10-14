@@ -5,7 +5,7 @@
           <!-- 首页 -->
         <div class="bottomNavigation_li_public_content" @click="clickChang('/')">
           <img v-bind:src="imagesUrl.homeIcon" alt="" />
-          <div :class=" imagesUrl.editIcon.indexOf('bianxie1') === -1 ? 'no_select' : 'select' ">
+          <div :class=" imagesUrl.editIcon.indexOf('shouye1') === -1 ? 'no_select' : 'select' ">
             首页
           </div>
         </div>
@@ -14,6 +14,13 @@
           <img :src="imagesUrl.editIcon" alt="" />
           <div :class=" imagesUrl.editIcon.indexOf('bianxie1') === -1 ? 'no_select' : 'select' ">
             编程
+          </div>
+        </div>
+        <!-- 成就 -->
+        <div class="bottomNavigation_li_public_content" @click="clickChang('/achieve')">
+          <img :src="imagesUrl.achieveIcon" alt="" />
+          <div :class=" imagesUrl.achieveIcon.indexOf('achieve1') === -1 ? 'no_select' : 'select' ">
+            成就
           </div>
         </div>
         <!-- 我的 -->
@@ -36,7 +43,8 @@ export default {
         // 排版图片使用懒加载
         homeIcon: require('../assets/shouye.png'), // 首页
         editIcon: require('../assets/bianxie.png'), // 编程
-        myIcon: require('../assets/wode.png') // 我的
+        myIcon: require('../assets/wode.png'), // 我的
+        achieveIcon: require('../assets/wode.png') // 成就
       }
     }
   },
@@ -48,16 +56,25 @@ export default {
           this.imagesUrl.homeIcon = require('../assets/shouye_select.png') // 首页
           this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
           this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
+          this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
           break
         case '/edit':
           this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
           this.imagesUrl.editIcon = require('../assets/bianxie1.png') // 编写
           this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
+          this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
           break
         case '/my':
           this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
           this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
           this.imagesUrl.myIcon = require('../assets/wode1.png') // 我的
+          this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
+          break
+        case '/achieve':
+          this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
+          this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
+          this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
+          this.imagesUrl.achieveIcon = require('../assets/achieve1.png') // 成就
           break
       }
     } else {
@@ -73,19 +90,29 @@ export default {
             this.imagesUrl.homeIcon = require('../assets/shouye_select.png') // 首页
             this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
+            this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
             this.$router.push({ path: '/' })
             break
           case '/edit':
             this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
             this.imagesUrl.editIcon = require('../assets/bianxie1.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
+            this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
             this.$router.push({ path: '/edit' })
             break
           case '/my':
             this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
             this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode1.png') // 我的
+            this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
             this.$router.push({ path: '/my' })
+            break
+          case '/achieve':
+            this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
+            this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
+            this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
+            this.imagesUrl.achieveIcon = require('../assets/achieve1.png') // 成就
+            this.$router.push({ path: '/achieve' })
             break
         }
       } else {
