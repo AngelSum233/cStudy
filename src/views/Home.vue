@@ -1,6 +1,10 @@
 <template>
   <div>
-    我是首页
+    <div class="top">C语言学习</div>
+    <div class="content">
+      <div class="search">
+      </div>
+    </div>
     <bottomNavigation></bottomNavigation>
   </div>
 </template>
@@ -13,3 +17,13 @@ export default {
   }
 }
 </script>
+<style scoped>
+.top{
+  color: #fff;
+  background-color: #16BCFA;
+  height: 80px;
+  width: 100%;
+}
+.content{
+}
+</style>>

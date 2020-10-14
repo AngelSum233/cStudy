@@ -5,7 +5,7 @@
           <!-- 首页 -->
         <div class="bottomNavigation_li_public_content" @click="clickChang('/')">
           <img v-bind:src="imagesUrl.homeIcon" alt="" />
-          <div :class=" imagesUrl.editIcon.indexOf('shouye1') === -1 ? 'no_select' : 'select' ">
+          <div :class=" imagesUrl.homeIcon.indexOf('shouye_select') === -1 ? 'no_select' : 'select' ">
             首页
           </div>
         </div>
@@ -44,7 +44,7 @@ export default {
         homeIcon: require('../assets/shouye.png'), // 首页
         editIcon: require('../assets/bianxie.png'), // 编程
         myIcon: require('../assets/wode.png'), // 我的
-        achieveIcon: require('../assets/wode.png') // 成就
+        achieveIcon: require('../assets/achieve.png') // 成就
       }
     }
   },
@@ -54,26 +54,14 @@ export default {
       switch (val1) {
         case '/':
           this.imagesUrl.homeIcon = require('../assets/shouye_select.png') // 首页
-          this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
-          this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
-          this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
           break
         case '/edit':
-          this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
           this.imagesUrl.editIcon = require('../assets/bianxie1.png') // 编写
-          this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
-          this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
           break
         case '/my':
-          this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
-          this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
           this.imagesUrl.myIcon = require('../assets/wode1.png') // 我的
-          this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
           break
         case '/achieve':
-          this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
-          this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
-          this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
           this.imagesUrl.achieveIcon = require('../assets/achieve1.png') // 成就
           break
       }
