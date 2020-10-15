@@ -1,8 +1,8 @@
 <template>
     <div>
-      <div class="top">
-        <span style="margin-left:10px;margin-top:20px"> 课程详情</span>
-      </div>
+      <div class="top" ><div style="margin-left:8px;margin-top:19px;">
+        <i class="el-icon-arrow-left" style="font-size: 20px; margin-top: 15px; margin-left: 5px" @click="back"></i>
+        课程详情</div></div>
       <div class="content">
           <img src="../assets/course1.png" alt="" class="img1">
           <div class="title">
@@ -13,7 +13,7 @@
           <div>
             <span style="font-size:20px">C语言编程</span>
             <div style="font-size:16px;color:#7c7a7a;margin-top:10px;margin-bottom:15px;">
-                <span>西南石油大学  杨力</span>
+                <span>西南石油大学  张剑</span>
                 <span>1678人参加</span>
             </div>
           </div>
@@ -29,7 +29,7 @@
           <div>
             <span style="font-size:20px;">授课老师</span>
             <div class="line"></div>
-            <span>杨力</span>
+            <span>张剑</span>
           </div>
       </div>
     </div>
@@ -38,6 +38,11 @@
 <script>
 export default {
   components: {
+  },
+  methods: {
+    back () {
+      this.$router.replace('/Home')
+    }
   }
 }
 
@@ -48,16 +53,17 @@ export default {
   position: fixed;
   top: 0;
   z-index: 9999;
-  color: #FF9000;
-  background-color: #16BCFA;
+  color: black;
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgba(19, 18, 18, 0.418);
   height: 80px;
   width: 100%;
   font-size:24px;
 }
 .content{
   height: 100%;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 15px;
+  margin-right: 15px;
   margin-bottom: 90px;
   margin-top: 90px;
 }

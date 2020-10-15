@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="top" >C语言学习</div>
+    <div class="top" ><div style="margin-left:15px;margin-top:19px;">C语言学习</div></div>
     <div class="content">
       <div class="search">
         <input type="text" class="searchContent">
@@ -29,10 +29,10 @@
         <div v-for="(course, index) in courseList" :key="index" class="course" @click="courseClick">
           <img v-bind:src="course.url" alt="" class="courseImg"/>
           <div class="courseContent">
-            <span style="color:#FF9000;font-size:18px;">{{course.title}}</span>
-            <div style="color:#7c7a7a;font-size:16px;margin-top:10px;"><span >{{course.person}}</span></div>
-            <div>
-              <img src="../assets/wode.png" alt="" style="width:20px;height:20px;margin-top:15px;">
+            <span style="color:#FF9000;font-size:17px;">{{course.title}}</span>
+            <div style="color:#7c7a7a;font-size:15px;margin-top:15px;"><span >{{course.person}}</span></div>
+            <div style="font-size:14px;margin-top:20px;" >
+              <img src="../assets/wode.png" alt="" style="width:20px;height:20px;font-size:14px;">
               <span>{{course.hot}}</span>
             </div>
           </div>
@@ -56,13 +56,13 @@ export default {
         { url: require('../assets/paihang.png'), title: '排行' },
         { url: require('../assets/jingpin.png'), title: '精品' },
         { url: require('../assets/fuli.png'), title: '福利' },
-        { url: require('../assets/jiaoyu.png'), title: '教育中心' }
+        { url: require('../assets/jiaoyu.png'), title: '教育' }
       ],
       courseList: [
-        { url: require('../assets/course1.png'), title: 'C语言编程', person: '西南石油大学  杨力', hot: '1678人参加' },
-        { url: require('../assets/course2.png'), title: '数据结构和算法', person: '华中科技大学  李国徽、袁凌 ', hot: '1890人参加' },
-        { url: require('../assets/course3.png'), title: '二级C语言程序设计', person: '新支点教育  邵牡丹 ', hot: '789人参加' },
-        { url: require('../assets/course4.png'), title: 'C语言程序设计进阶', person: '浙江大学  翁恺', hot: '490人参加' }
+        { url: require('../assets/course1.png'), title: 'C语言编程', person: '西南石油大学  张剑', hot: '1678人参加' },
+        { url: require('../assets/course2.png'), title: '数据结构和算法', person: '西南石油大学  杨云', hot: '1890人参加' },
+        { url: require('../assets/course3.png'), title: '二级C语言程序设计', person: '西南石油大学  杨力', hot: '789人参加' },
+        { url: require('../assets/course4.png'), title: 'C语言程序设计进阶', person: '西南石油大学  王世元', hot: '490人参加' }
       ]
     }
   },
@@ -87,8 +87,8 @@ export default {
 }
 .content{
   height: 100%;
-  margin-left: 8px;
-  margin-right: 8px;
+  margin-left: 15px;
+  margin-right: 15px;
   margin-bottom: 90px;
   margin-top: 80px;
 }
@@ -99,6 +99,7 @@ export default {
   margin-top: 8px;
   margin-bottom: 8px;
   border: none;
+  outline: none;
   border-radius: 18px;
   height: 36px;
   width: 100%;
@@ -114,6 +115,7 @@ export default {
   height: 32px;
   width: 62px;
   border: none;
+  outline: none;
   border-radius: 18px;
 }
 /* 分类导航开始 */
@@ -139,7 +141,7 @@ export default {
 }
 .course .courseImg{
   height: 100px;
-  width: 176px;
+  width: 162px;
   border-radius: 10px;
   margin-right: 10px;
 }
