@@ -3,9 +3,9 @@
     <div>
       <div class="box1">
         <div>
-          <i class="el-icon-arrow-left" style="font-size: 20px; margin-top: 15px; margin-left: -220px" @click="back"></i>
+          <i class="el-icon-arrow-left" style="font-size: 20px; margin-top: 15px" @click="back"></i>
           <span class="title">绘制圣诞树</span>
-          <p class="content" style="margin-top: 60px">
+          <p class="content">
             发挥你的想象力<br>
             C语言绘图能做的还有很多哦！<br>
           </p>
@@ -73,7 +73,7 @@ export default {
   .title {
     font-family: 微软雅黑;
     font-size: 20px;
-    margin-left: 25px;
+    margin-left: 10px;
   }
   .compileCode {
     width: 90%;
@@ -110,7 +110,7 @@ export default {
     color: rgba(101, 101, 101, 1);
   }
   .content{
-    margin-top: 70px;
+    margin-top: 25px;
     margin-left: 20px;
   }
 </style>

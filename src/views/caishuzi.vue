@@ -16,12 +16,12 @@
         <i class="el-icon-plus" style="font-size: 10px;margin-left: 15px; color: white"></i>
         <div class="tableLine2"></div>
         <p style="color: white">
-          1.num = 414//23<br>
-          2.number = input('猜一猜414//23运行结果吧')<br>
-          3.times = 1<br>
-          4.while True<br>
-          5.if times > 2：<br>
-          6.break<br>
+          1  num = 414//23<br>
+          2  number = input('猜一猜414//23运行结果吧')<br>
+          3  times = 1<br>
+          4  while True<br>
+          5  if times > 2：<br>
+          6  break<br>
         </p>
       </div>
       <i class="el-icon-refresh-right" style="color: grey; margin-left: 20px"
@@ -47,12 +47,12 @@
         >运行结果</span>
         <div class="tableLine3"></div>
         <p class="content" style="color: white; margin-top: 10px">
-          1.输入数字：1<br>
-          2.猜错了，再试一次吧<br>
-          3.输入数字：20<br>
-          4.又错了，还有一次机会哦<br>
-          5.输入数字：15<br>
-          6.恭喜你，猜对啦！<br>
+          1  输入数字：1<br>
+          2  猜错了，再试一次吧<br>
+          3  输入数字：20<br>
+          4  又错了，还有一次机会哦<br>
+          5  输入数字：15<br>
+          6  恭喜你，猜对啦！<br>
         </p>
       </div>
     </div>

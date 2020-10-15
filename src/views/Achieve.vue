@@ -2,7 +2,7 @@
     <div>
       <div>
         <div class="title">
-          <span>我的学习成就</span>
+          <span style="font-size: 20px; text-align: center; width: 90%; margin-top: 18px">我的学习成就</span>
         </div>
         <div>
           <div class="box">
@@ -21,7 +21,7 @@
             <span class="text">学习进度</span>
             <span class="num">15%</span>
           </div>
-          <el-calendar v-model="value" class="daily"></el-calendar>
+          <el-calendar v-model="value" class="daily" style="background-color: ivory; width: 90%; margin-left: 20px"></el-calendar>
         </div>
       </div>
       <bottomNavigation></bottomNavigation>
@@ -70,6 +70,7 @@ export default {
     height: 80px;
     border-radius: 8px;
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: antiquewhite;
   }
   .text{
     float: left;

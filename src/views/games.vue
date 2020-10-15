@@ -1,6 +1,6 @@
 <template>
     <div>
-      <div class="title" style="font-size: 26px">
+      <div class="title" style="font-size: 26px; margin-top: 3px">
         代码小游戏
       </div>
       <div>
@@ -84,7 +84,7 @@ export default {
     font-family: 华文中宋;
     font-size: 20px;
     text-align: center;
-    background-color: bisque;
+    background-color: antiquewhite;
   }
   .img1{
     margin-left: 50px;

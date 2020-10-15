@@ -3,7 +3,7 @@
     <div>
       <div class="box1">
         <div>
-          <i class="el-icon-arrow-left" style="font-size: 20px; margin-top: 15px; margin-left: -190px" @click="back"></i>
+          <i class="el-icon-arrow-left" style="font-size: 20px; margin-top: 15px" @click="back"></i>
           <span class="title">拯救小哪吒</span>
           <p class="content">
             这是一个比较复杂的代码<br>
@@ -112,7 +112,7 @@ export default {
     color: rgba(101, 101, 101, 1);
   }
   .content{
-    margin-top: 70px;
+    margin-top: 30px;
     margin-left: 20px;
   }
 </style>
