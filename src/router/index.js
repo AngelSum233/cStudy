@@ -5,6 +5,11 @@ import my from '../views/my.vue'
 import edit from '../views/Edit.vue'
 import login from '../views/login.vue'
 import Achieve from '../views/Achieve'
+import games from '../views/games'
+import xinyuandayin from '../views/xinyuandayin'
+import huizhishengdanshu from '../views/huizhishengdanshu'
+import caishuzi from '../views/caishuzi'
+import zhengjiunezha from '../views/zhengjiunezha'
 import courseView from '../views/courseView'
 
 Vue.use(Router)
@@ -31,6 +36,11 @@ export default new Router({
     { path: '/my', component: my },
     { path: '/login', component: login },
     { path: '/achieve', component: Achieve },
+    { path: '/games', component: games },
+    { path: '/xinyuandayin', component: xinyuandayin },
+    { path: '/huizhishengdanshu', component: huizhishengdanshu },
+    { path: '/caishuzi', component: caishuzi },
+    { path: '/zhengjiunezha', component: zhengjiunezha },
     { path: '/courseView', component: courseView }
   ]
 })

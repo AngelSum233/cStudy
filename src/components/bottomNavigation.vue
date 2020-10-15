@@ -16,6 +16,13 @@
             编程
           </div>
         </div>
+        <!-- 游戏 -->
+        <div class="bottomNavigation_li_public_content" @click="clickChang('/games')">
+          <img :src="imagesUrl.gamesIcon" alt="" />
+          <div :class=" imagesUrl.gamesIcon.indexOf('game1') === -1 ? 'no_select' : 'select' ">
+            游戏
+          </div>
+        </div>
         <!-- 成就 -->
         <div class="bottomNavigation_li_public_content" @click="clickChang('/achieve')">
           <img :src="imagesUrl.achieveIcon" alt="" />
@@ -44,7 +51,8 @@ export default {
         homeIcon: require('../assets/shouye.png'), // 首页
         editIcon: require('../assets/bianxie.png'), // 编程
         myIcon: require('../assets/wode.png'), // 我的
-        achieveIcon: require('../assets/achieve.png') // 成就
+        achieveIcon: require('../assets/achieve.png'), // 成就
+        gamesIcon: require('../assets/game.png') // 游戏
       }
     }
   },
@@ -64,6 +72,9 @@ export default {
         case '/achieve':
           this.imagesUrl.achieveIcon = require('../assets/achieve1.png') // 成就
           break
+        case '/games':
+          this.imagesUrl.gamesIcon = require('../assets/game1.png') // 游戏
+          break
       }
     } else {
       console.log('不合法参数')
@@ -79,6 +90,7 @@ export default {
             this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
             this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
+            this.imagesUrl.gamesIcon = require('../assets/game.png') // 游戏
             this.$router.push({ path: '/' })
             break
           case '/edit':
@@ -86,6 +98,7 @@ export default {
             this.imagesUrl.editIcon = require('../assets/bianxie1.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
             this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
+            this.imagesUrl.gamesIcon = require('../assets/game.png') // 游戏
             this.$router.push({ path: '/edit' })
             break
           case '/my':
@@ -93,6 +106,7 @@ export default {
             this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode1.png') // 我的
             this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
+            this.imagesUrl.gamesIcon = require('../assets/game.png') // 游戏
             this.$router.push({ path: '/my' })
             break
           case '/achieve':
@@ -100,7 +114,16 @@ export default {
             this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
             this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
             this.imagesUrl.achieveIcon = require('../assets/achieve1.png') // 成就
+            this.imagesUrl.gamesIcon = require('../assets/game.png') // 游戏
             this.$router.push({ path: '/achieve' })
+            break
+          case '/games':
+            this.imagesUrl.homeIcon = require('../assets/shouye.png') // 首页
+            this.imagesUrl.editIcon = require('../assets/bianxie.png') // 编写
+            this.imagesUrl.myIcon = require('../assets/wode.png') // 我的
+            this.imagesUrl.achieveIcon = require('../assets/achieve.png') // 成就
+            this.imagesUrl.gamesIcon = require('../assets/game1.png') // 游戏
+            this.$router.push({ path: '/games' })
             break
         }
       } else {
