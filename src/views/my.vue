@@ -51,13 +51,11 @@ export default {
 
 <style scoped>
 .content {
-  margin-left: 10px;
+  margin: 20px 15px 15px 15px ;
 }
 .contentTop {
   display: flex;
-  margin-top: 20px;
-  margin-right: 10px;
-  margin-top: 10px;
+  margin-bottom: 25px;
 }
 .contentTop img {
   width: 80px;
@@ -77,7 +75,6 @@ export default {
   color: #444343;
   height: 62px;
   margin-top: 10px;
-  margin-right: 10px;
   border-radius: 5%;
   box-shadow: 0px 0px 10px rgb(230, 227, 227);
 }
